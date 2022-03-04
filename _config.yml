@@ -1,14 +1,16 @@
-title:              Clean Blog
-email:              your-email@example.com
-description:        A Blog Theme by Start Bootstrap
-author:             Start Bootstrap
-baseurl:            "/startbootstrap-clean-blog-jekyll"
-url:                "https://startbootstrap.github.io"
+title:              High Harmonics Validator
+email:              HighHarmonics@protonmail.com
+description:        Harmony Blockchain Validators | Running on stable cloud nfrastructure with active monitoring
+                    
+                    Come Stake with us https://google.com
+author:             High Harmonics Validators
+baseurl:            ""
+url:                "https://HighHarmonics.github.io"
 
 # Social Profiles
-twitter_username:   SBootstrap
-github_username:    StartBootstrap
-facebook_username:  StartBootstrap
+twitter_username: HighHarmonics
+github_username: HighHarmonics
+facebook_username:  
 instagram_username:  
 linkedin_username:
 
