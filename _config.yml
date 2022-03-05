@@ -1,8 +1,6 @@
-title:              High Harmonics Validator
+title:              HIGH HARMONICS
 email:              HighHarmonics@protonmail.com
-description:        Harmony Blockchain Validators | Running on stable cloud nfrastructure with active monitoring
-                    
-                    Come Stake with us https://google.com
+description:        Harmony Blockchain Validators | Running Nodes on stable cloud infrastructure with active monitoring
 author:             High Harmonics Validators
 baseurl:            ""
 url:                "https://HighHarmonics.github.io"
@@ -10,9 +8,13 @@ url:                "https://HighHarmonics.github.io"
 # Social Profiles
 twitter_username: HighHarmonics
 github_username: HighHarmonics
-facebook_username:  
+facebook_username: HighHarmonics
 instagram_username:  
 linkedin_username:
+staking_username: one1ramx2edudcn55ttt03derrm6kswe4t22eywar3
+#[staking with us](https://staking.harmony.one/validators/mainnet/one1ramx2edudcn55ttt03derrm6kswe4t22eywar3)
+
+
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
