@@ -36,47 +36,8 @@ layout: default
 <a href="https://staking.harmony.one/validators/mainnet/one1ramx2edudcn55ttt03derrm6kswe4t22eywar3"> 
 <i class="fa fa-heart" ></i> HARMONY VALIDATOR | 0% FEES | ACTIVELY MONITORED SERVERS
 <i class="fa fa-heart" ></i>
-<i class="fa fa-heart" ></i> STAKE WITH US
-<i class="fa fa-heart" ></i>
 </a> 
 </span>
 
 
-<hr>
-<h2 style="justify-content:center"> POSTS </h2> 
-<hr>
-        <!-- Home Post List -->
-        {% for post in site.posts limit : 5 %}
 
-        <article class="post-preview">
-          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-            <h2 class="post-title">{{ post.title }}</h2>
-            {% if post.subtitle %}
-            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-            {% else %}
-            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
-            {% endif %}
-          </a>
-          <p class="post-meta">Posted by
-            {% if post.author %}
-            {{ post.author }}
-            {% else %}
-            {{ site.author }}
-            {% endif %}
-            on
-            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
-          </p>
-        </article>
-
-        <hr>
-
-        {% endfor %}
-
-        <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
-        </div>
-
-      </div>
-    </div>
-  </div>
