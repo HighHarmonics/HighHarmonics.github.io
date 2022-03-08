@@ -16,7 +16,7 @@ background: '/img/money.jpg'
 <th>&nbsp;</th>
 <th style="text-align:center">&nbsp;&nbsp;&nbsp;<a href="https://www.youtube.com/watch?v=slAuaOTyzPw"><i class="fa fa-cubes fa-6x" aria-hidden="true"></i><br>CREATE WALLET</a></th>
 <th>&nbsp;</th>
-<th style="text-align:center">&nbsp;&nbsp;<a href="https://staking.harmony.one/validators/mainnet/one1ramx2edudcn55ttt03derrm6kswe4t22eywar3"> <i class="fa fa-coins fa-6x" aria-hidden="true"></i><br>STAKE</a></th>
+<th style="text-align:center">&nbsp;&nbsp;<a href="https://staking.harmony.one/validators/mainnet/one1ramx2edudcn55ttt03derrm6kswe4t22eywar3"> <i class="fa fa-coins fa-6x" aria-hidden="true"></i><br>DELEGATE</a></th>
 <th>&nbsp;</th>
 </tr>
 </tbody>
