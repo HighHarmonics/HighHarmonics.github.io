@@ -1,0 +1,85 @@
+I"3<h1 id="openssh-client-on-windows-10">OpenSSH Client on Windows 10</h1>
+
+<h2 id="why-use-openssh-instead-putty-or-winscp">Why use OpenSSH instead putty or WinSCP?</h2>
+<p>OpenSSH a modern tool which works out of the box with most of the servers.</p>
+
+<p><em>“OpenSSH is the de facto standard implementation of the SSH protocol. If PuTTY and OpenSSH differ, PuTTY is the one that’s incompatible.</em></p>
+
+<p><em>If you generate a key with OpenSSH using <code class="language-plaintext highlighter-rouge">ssh-keygen</code> with the default options, it will work with virtually every server out there. A server that doesn’t accept such a key would be antique, using a different implementation of SSH, or configured in a weird restrictive way.</em></p>
+
+<p><em>PuTTY uses a different key file format. It comes with tools to convert between its own .ppk format and the format of OpenSSH.”</em> [1]</p>
+
+<h2 id="installation-process">Installation Process</h2>
+
+<h3 id="step-0">Step 0</h3>
+<p>The OpenSSH Client and Server is available on Windows 10 with a build higher than 1809. To check the version, open the Windows commandline <code class="language-plaintext highlighter-rouge">cmd.exe</code></p>
+
+<p><img src="/img/posts/0ssh.JPG" alt="" /></p>
+
+<h3 id="step-1">Step 1</h3>
+<ul>
+  <li>Press <kbd>WIN</kbd>+ <kbd>R</kbd> to open the <code class="language-plaintext highlighter-rouge">Run</code> window.</li>
+  <li>Type the command <code class="language-plaintext highlighter-rouge">ms-settings:optionalfeatures</code> inside the <strong>Open:</strong> box and press <kbd>ENTER</kbd></li>
+</ul>
+
+<p><img src="/img/posts/1ssh.JPG" alt="" /></p>
+
+<h3 id="step-2">Step 2</h3>
+<p>The above command will open the <strong>Optional features</strong> window</p>
+
+<ul>
+  <li>Search the list of <strong>Installed features</strong> for <code class="language-plaintext highlighter-rouge">OpenSSH</code> to see if it is installed already</li>
+</ul>
+
+<p><img src="/img/posts/2ssh.jpg" alt="" /></p>
+
+<ul>
+  <li>If not installed, click on <strong>Add a feature</strong> inside the box</li>
+  <li>here you type <strong>openssh</strong> in the Search box and press <kbd>ENTER</kbd></li>
+  <li>Select <strong>OpenSSH Client</strong> in the results</li>
+  <li>Click <strong>Install</strong> button to get the <code class="language-plaintext highlighter-rouge">OpenSSH</code> installed on your machine</li>
+</ul>
+
+<p><img src="/img/posts/3ssh.png" alt="" /></p>
+
+<p>After the installation is done you can verify it by typing the following in the terminal.</p>
+
+<pre><code class="language-cmd">where ssh
+</code></pre>
+<p>you should see the following output</p>
+<pre><code class="language-cmd">C:\Windows\System32\OpenSSH\ssh.exe
+</code></pre>
+
+<p>Congratulations 🎉🎉🎉 now the <code class="language-plaintext highlighter-rouge">OpenSSH</code> is installed on your machine! In the next subsection we will generate ssh keys.</p>
+
+<h2 id="generating-public-private-key-pair">Generating Public-Private Key Pair</h2>
+<p>In order to generate a public-private key pair we use the
+following command</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen
+</code></pre></div></div>
+<p>which will give the following output</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Generating public/private rsa key pair.
+Enter file in which to save the key (C:\Users\HighHarmonics\.ssh\id_rsa)
+</code></pre></div></div>
+<p>Leave the default path as it is. Your username would be a different one, off course. It may also ask you for a password for the key pair. You can go ahead without it.</p>
+
+<h3 id="accessing-the-public-key">Accessing the Public Key</h3>
+<p>To get your Public key, you can use the following command</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat C:\Users\HighHarmonics\.ssh\id_rsa.pub
+</code></pre></div></div>
+<p>which will produce something like the following</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCxZzrJ8qK80LxvxcPxJZPtJvPwpmbO9tXnj3U7GdCdpcHEKlQGlSv0ok/ZvruiBenfUQgrmcy41Ku8qC+pZr0ZRe/26q9M34cN6Omec3rWsizVPumppudmFwzkNUi6dUytOP2KTURRw6cOaZU/yA2iaDQZiVaAQxqklrvuy5wmh5Z3f5Kzj1sJB59LVvQNcvv6CthL5U8/NJ/usnPWpQUjy1CcLht60XcSm7SIQTZN3j9wNJQfhQV+UT9VjwMygqDlDOM2SyJoyjpc4cShqkGNPAHv3dUOjeMKIfePvNqgmunKViiaLPNfJRc+6wSswLP/f3oxG3NwBDtUFgZr5zADyQCMUfJ43DhoGfSHDGJCZxKOgikjNdqD2CpBgbMt4iv4gfOWupVInL4ylO7k9Y1zFoUZAT0yxPGwdUOVIUJOYVPhXaokRm/O+4AcUxbUnj02MkCll60bm3rUR1LX855uQkwgJuV4ojCGeNmKfy/21htZLe0NY0T95yL50taUcR9XOtzFQ4cStlcbZiilLXkhzhaPs2HCBd4OvI7PDtDJsqbAxKBKecKQPOLJEYfndKQkLdfITF441tN52eHiRbBbasRtP5eu7BtPKnuLFt2/Wv39Bl+/GLTPZZbkjnIkfMojSs9+LzeE6HjNO8l24WsJLwT73t5nOj8xU5U9XM/zUgw==highharmonics@MacBuntu
+</code></pre></div></div>
+
+<p>You can copy this output and paste to trusted keys on the server side.</p>
+
+<hr />
+
+<p>REFERENCES</p>
+
+<p><a href="https://unix.stackexchange.com/questions/74545/what-is-the-difference-between-an-openssh-key-and-putty-key">[ 1 ] stack exchange </a></p>
+:ET
