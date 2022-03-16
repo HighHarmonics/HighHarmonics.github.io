@@ -1,7 +1,7 @@
-I"3<h1 id="openssh-client-on-windows-10">OpenSSH Client on Windows 10</h1>
+I"G<h1 id="openssh-client-on-windows-10">OpenSSH Client on Windows 10</h1>
 
 <h2 id="why-use-openssh-instead-putty-or-winscp">Why use OpenSSH instead putty or WinSCP?</h2>
-<p>OpenSSH a modern tool which works out of the box with most of the servers.</p>
+<p>OpenSSH is a modern tool which works out of the box with most of the servers. Once installed on your PC, creating and managing the keys are just a couple is done easily without opening windows or clicking around. Furthermore OpenSSH provides you with the functionality of both tools combined, i.e. the private-public key pair via <code class="language-plaintext highlighter-rouge">ssh-keygen</code> and the secure copy function via <code class="language-plaintext highlighter-rouge">scp</code>.</p>
 
 <p><em>“OpenSSH is the de facto standard implementation of the SSH protocol. If PuTTY and OpenSSH differ, PuTTY is the one that’s incompatible.</em></p>
 
@@ -40,7 +40,7 @@
   <li>Click <strong>Install</strong> button to get the <code class="language-plaintext highlighter-rouge">OpenSSH</code> installed on your machine</li>
 </ul>
 
-<p><img src="/img/posts/3ssh.png" alt="" /></p>
+<p><img src="/img/posts/3ssh.png" alt="drawing" style="width:600px;" /></p>
 
 <p>After the installation is done you can verify it by typing the following in the terminal.</p>
 
@@ -82,4 +82,6 @@ Enter file in which to save the key (C:\Users\HighHarmonics\.ssh\id_rsa)
 <p>REFERENCES</p>
 
 <p><a href="https://unix.stackexchange.com/questions/74545/what-is-the-difference-between-an-openssh-key-and-putty-key">[ 1 ] stack exchange </a></p>
+
+<p><a href="https://medium.com/@highharmonics/bf4f4f84bdc7">Medium Version</a></p>
 :ET
